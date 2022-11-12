@@ -20,6 +20,17 @@ def play_game(word):
     To initate the start of the game for the user to begin playing
     """
 
+    print(word)
+
+    guessed_letters = []
+    lives = 6
+    won = False
+    chosen_word = "_" * len(word)
+    print(chosen_word)
+
+    guess_letter = input(("Please choose a letter: ")).upper()
+    print(graphics(lives))
+
 
 
 def select_word():
@@ -31,6 +42,10 @@ def select_word():
     return random_word
 
 def graphics(image_of_lives):
+    """
+    The appropriate graphic below be presented to the user dependpent on
+    how many lives the user has left. The user has six lives.
+    """
     display_image = [
         f"""
               =======
