@@ -1,16 +1,25 @@
 import random
 from words import words
 
+class Color:
+    """
+    Sets colors to be called for different texts.
+    """
+    RESET = '\033[0m'
+    RED = '\033[91m'
+
 def opening_credits():
     global players_name
     
     players_name = input("Enter your name: ")
     print(f"Hi {players_name}, let's play!")
 
+
 def play_game(word):
     """
     To initate the start of the game for the user to begin playing
     """
+
 
 
 def select_word():
@@ -20,6 +29,103 @@ def select_word():
     """
     random_word = random.choice(words).upper()
     return random_word
+
+def graphics(image_of_lives):
+    display_image = [
+        f"""
+              =======
+              |/    |
+              |     {Color.RED}O{Color.RESET}
+              |    /|\\
+              |     |
+              |    / \\
+         _____|_________
+        /     |\\        /|
+        ______________ / /
+                      | /
+        ______________ /
+        """,
+        f"""
+              =======
+              |/    |
+              |     0
+              |    /|\\
+              |     |
+              |    /
+         _____|_________
+        /     |\\        /|
+        ______________ / /
+                      | /
+        ______________ /
+        """,
+        f"""
+              =======
+              |/    |
+              |     0
+              |    /|\\
+              |     |
+              |
+         _____|_________
+        /     |\\        /|
+        ______________ / /
+                      | /
+        ______________ /
+        """,
+        f"""
+              =======
+              |/    |
+              |     0
+              |    /|
+              |     |
+              |
+         _____|_________
+        /     |\\        /|
+        ______________ / /
+                      | /
+        ______________ /
+        """,
+        f"""
+              =======
+              |/    |
+              |     0
+              |     |
+              |     |
+              |
+         _____|_________
+        /     |\\        /|
+        ______________ / /
+                      | /
+        ______________ /
+        """,
+        f"""
+              =======
+              |/    |
+              |     0
+              |
+              |
+              |
+         _____|_________
+        /     |\\        /|
+        ______________ / /
+                      | /
+        ______________ /
+        """,
+        """
+              =======
+              |/    |
+              |
+              |
+              |
+              |
+         _____|_________
+        /     |\\        /|
+        ______________ / /
+                      | /
+        ______________ /
+        """
+    ]
+
+    return display_image[image_of_lives]
 
 def main():
     """
