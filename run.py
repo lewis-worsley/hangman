@@ -9,10 +9,10 @@ class Color:
     RED = '\033[91m'
 
 def opening_credits():
-    global players_name
+    global player_name
     
-    players_name = input("Enter your name: ")
-    print(f"Hi {players_name}, let's play!")
+    player_name = input("Enter your name: ")
+    print(f"Hi {player_name}, let's play!")
 
 
 def play_game(word):
@@ -28,9 +28,39 @@ def play_game(word):
     chosen_word = "_" * len(word)
     print(chosen_word)
 
-    guess_letter = input(("Please choose a letter: ")).upper()
-    print(graphics(lives))
+    while lives > 0 and not won:
+        print(graphics(lives))
+        print(chosen_word, "\n")
+        guess_letter = input(("Please choose a letter: ")).upper()
+        
+        if guess_letter.isalpha() and len(guess_letter) == 1:
+            if guess_letter not in guessed_letters:
+                if guess_letter in word:
+                    guessed_letters.append(guess_letter)
+                    broken_word = list(chosen_word)
+                    print(guessed_letters)
+                    indices = [i for i, letter in enumerate(word)
+                                if letter == guess_letter]
+                    for index in indices:
+                        broken_word[index] = guess_letter
+                        chosen_word = "".join(broken_word)
+                    
+                    if "_" not in chosen_word:
+                        print(f"Congratulations {player_name}, you won!")
 
+                else:
+                    lives = lives - 1
+                    print(f"{lives} lives left")
+                    print(guessed_letters)
+        
+            elif guess_letter in guessed_letters:
+                print(f"You've already guessed '{guess_letter}'. Choose a different letter. Here are your current guesses {guessed_letters}.\n")
+
+        else:
+            print(f"\nPlease select only one (1) letter. You selected '{guess_letter}'")
+    
+    if lives == 0:
+        print("Game Over. You lose!")
 
 
 def select_word():
