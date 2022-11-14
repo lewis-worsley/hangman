@@ -38,7 +38,7 @@ def play_game(word):
                 if guess_letter in word:
                     guessed_letters.append(guess_letter)
                     broken_word = list(chosen_word)
-                    print(guessed_letters)
+                    print(guessed_letters, "\n")
                     indices = [i for i, letter in enumerate(word)
                                 if letter == guess_letter]
                     for index in indices:
@@ -46,9 +46,12 @@ def play_game(word):
                         chosen_word = "".join(broken_word)
                     
                     if "_" not in chosen_word:
+                        won = True
+                        print(chosen_word)
                         print(f"Congratulations {player_name}, you won!")
 
                 else:
+                    guessed_letters.append(guess_letter)
                     lives = lives - 1
                     print(f"{lives} lives left")
                     print(guessed_letters)
@@ -57,10 +60,12 @@ def play_game(word):
                 print(f"You've already guessed '{guess_letter}'. Choose a different letter. Here are your current guesses {guessed_letters}.\n")
 
         else:
-            print(f"\nPlease select only one (1) letter. You selected '{guess_letter}'")
+            print(f"\nPlease select only one (1) letter. You selected '{guess_letter}' which contains {len(guess_letter)} letters.")
     
     if lives == 0:
-        print("Game Over. You lose!")
+        print(graphics(0))
+        print(f"Game Over. You lose! The correct was {word}")
+
 
 
 def select_word():
@@ -93,7 +98,7 @@ def graphics(image_of_lives):
         f"""
               =======
               |/    |
-              |     0
+              |     O
               |    /|\\
               |     |
               |    /
@@ -106,7 +111,7 @@ def graphics(image_of_lives):
         f"""
               =======
               |/    |
-              |     0
+              |     O
               |    /|\\
               |     |
               |
@@ -119,7 +124,7 @@ def graphics(image_of_lives):
         f"""
               =======
               |/    |
-              |     0
+              |     O
               |    /|
               |     |
               |
@@ -132,7 +137,7 @@ def graphics(image_of_lives):
         f"""
               =======
               |/    |
-              |     0
+              |     O
               |     |
               |     |
               |
@@ -145,7 +150,7 @@ def graphics(image_of_lives):
         f"""
               =======
               |/    |
-              |     0
+              |     O
               |
               |
               |
