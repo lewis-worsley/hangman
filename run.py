@@ -12,7 +12,7 @@ def opening_credits():
     global player_name
     
     player_name = input("Enter your name: ")
-    print(f"Hi {player_name}, let's play!")
+    print(f"Hi {player_name}, let's play!\n")
 
 
 def play_game(word):
@@ -43,12 +43,13 @@ def play_game(word):
                                 if letter == guess_letter]
                     for index in indices:
                         broken_word[index] = guess_letter
-                        chosen_word = "".join(broken_word)
+                    chosen_word = "".join(broken_word)
                     
                     if "_" not in chosen_word:
                         won = True
                         print(chosen_word)
-                        print(f"Congratulations {player_name}, you won!")
+                        print(f"Congratulations {player_name}, you won!\n")
+                        restart_game()
 
                 else:
                     guessed_letters.append(guess_letter)
@@ -64,9 +65,53 @@ def play_game(word):
     
     if lives == 0:
         print(graphics(0))
-        print(f"Game Over. You lose! The correct was {word}")
+        print(f"Game Over. You lose {player_name}! The correct word was {word}")
+        restart_game()
 
+def restart_game():
+    """
+    Provides the player with an opportunity to restart the game
+    """
 
+    player_restart = False
+
+    while player_restart is False:
+
+        player_response = input("\nAnother round of Hangman? (Y/N): ").upper()
+
+        try:
+            if player_response == "Y":
+                new_word = select_word()
+                play_game(new_word)
+            
+            elif player_response == "N":
+                player_restart = True
+
+                print(f"Until next time {player_name}...")
+                
+                print(
+                    """
+    
+  ______                             __  __                            __ 
+ /      \                           |  \|  \                          |  \
+|  $$$$$$\  ______    ______    ____| $$| $$____   __    __   ______  | $$
+| $$ __\$$ /      \  /      \  /      $$| $$    \ |  \  |  \ /      \ | $$
+| $$|    \|  $$$$$$\|  $$$$$$\|  $$$$$$$| $$$$$$$\| $$  | $$|  $$$$$$\| $$
+| $$ \$$$$| $$  | $$| $$  | $$| $$  | $$| $$  | $$| $$  | $$| $$    $$ \$$
+| $$__| $$| $$__/ $$| $$__/ $$| $$__| $$| $$__/ $$| $$__/ $$| $$$$$$$$ __ 
+ \$$    $$ \$$    $$ \$$    $$ \$$    $$| $$    $$ \$$    $$ \$$     \|  \
+  \$$$$$$   \$$$$$$   \$$$$$$   \$$$$$$$ \$$$$$$$  _\$$$$$$$  \$$$$$$$ \$$
+                                                  |  \__| $$              
+                                                   \$$    $$              
+                                                    \$$$$$$               
+
+            
+            """)
+        
+            else:
+                raise ValueError(f"{player_response}")
+        except ValueError as e:
+            print(f"\nYou selected {e}. Please type 'Y' to play new round or 'N' to end game.")
 
 def select_word():
     """
