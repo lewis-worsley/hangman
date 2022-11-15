@@ -21,7 +21,6 @@ def opening_credits():
     player_name = input("Enter your name: ")
     print(f"\nHi {player_name}, let's play!\n")
 
-
 def play_game(word):
     """
     To initate the start of the game for the user to begin playing.
@@ -35,8 +34,6 @@ def play_game(word):
     lives = 6
     won = False
     chosen_word = "_" * len(word)
-
-    print(word)
 
     while lives > 0 and not won:
         print(graphics(lives))
@@ -101,7 +98,7 @@ def restart_game():
             
             elif player_response == "N":
                 player_restart = True
-                print(f"Until next time {player_name}...")
+                print(f"\nUntil next time {player_name}...")
                 
                 print(
                     """
@@ -242,10 +239,7 @@ def main():
     """
     To run the game and present the opening credits to the user
     """
-
-    wins = 0
-    loses = 0
-
+    
     opening_credits()
     select_word()
     play_game(select_word())
