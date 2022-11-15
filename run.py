@@ -28,6 +28,9 @@ def play_game(word):
     Also keeps a record of the score
     """
 
+    global wins
+    global loses
+
     guessed_letters = []
     lives = 6
     won = False
