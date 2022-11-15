@@ -3,14 +3,16 @@ from words import words
 
 class Color:
     """
-    Sets colors to be called for different texts.
+    Red added for hangman graphic (0).
     """
     RESET = '\033[0m'
     RED = '\033[91m'
 
 def opening_credits():
+    """
+    Asks the user for their name so we can make the game personal.
+    """
 
-    
     global player_name
     
     player_name = input("Enter your name: ")
