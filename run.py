@@ -86,7 +86,6 @@ def restart_game():
             
             elif player_response == "N":
                 player_restart = True
-
                 print(f"Until next time {player_name}...")
                 
                 print(
