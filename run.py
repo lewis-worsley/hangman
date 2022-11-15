@@ -3,7 +3,7 @@ from words import words
 
 class Color:
     """
-    Red added for hangman graphic (0).
+    Red added for hangman graphic(0).
     """
     RESET = '\033[0m'
     RED = '\033[91m'
@@ -29,6 +29,9 @@ def play_game(word):
     won = False
     chosen_word = "_" * len(word)
 
+    wins = 0
+    loses = 0
+
     while lives > 0 and not won:
         print(graphics(lives))
         print(chosen_word, "\n")
@@ -50,7 +53,10 @@ def play_game(word):
                         won = True
                         print(chosen_word)
                         print(f"\nCongratulations {player_name}, you won! The word was {word}.")
+                        wins = wins + 1
+                        print(f"\n{player_name}'s score\nWins: {wins}\nLoses: {loses}")
                         restart_game()
+                        
 
                 else:
                     guessed_letters.append(guess_letter)
@@ -68,6 +74,8 @@ def play_game(word):
         print(graphics(0))
         print(chosen_word, "\n")
         print(f"Game Over. You lose {player_name}! The correct word was {word}.")
+        loses = loses + 1
+        print(f"\n{player_name}'s score\nWins: {wins}\nLoses: {loses}")
         restart_game()
 
 def restart_game():
@@ -78,7 +86,6 @@ def restart_game():
     player_restart = False
 
     while player_restart is False:
-
         player_response = input("\nAnother round of Hangman? (Y/N): ").upper()
 
         try:
@@ -111,6 +118,7 @@ def restart_game():
         
             else:
                 raise ValueError(f"{player_response}")
+                
         except ValueError as e:
             print(f"\nYou selected {e}. Please type 'Y' to play new round or 'N' to end game.")
 
@@ -227,9 +235,11 @@ def main():
     """
     To run the game and present the opening credits to the user
     """
+
     opening_credits()
     select_word()
     play_game(select_word())
+
 
 print(
         """
