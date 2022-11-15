@@ -1,6 +1,9 @@
 import random
 from words import words
 
+wins = 0 
+loses = 0
+
 class Color:
     """
     Red added for hangman graphic(0).
@@ -30,8 +33,7 @@ def play_game(word):
     won = False
     chosen_word = "_" * len(word)
 
-    wins = 0
-    loses = 0
+    print(word)
 
     while lives > 0 and not won:
         print(graphics(lives))
@@ -54,6 +56,7 @@ def play_game(word):
                         won = True
                         print(chosen_word)
                         print(f"\nCongratulations {player_name}, you won! The word was {word}.")
+                        global wins
                         wins = wins + 1
                         print(f"\n{player_name}'s score\nWins: {wins}\nLoses: {loses}")
                         restart_game()
@@ -115,6 +118,7 @@ def restart_game():
 
             
             """)
+                exit()
         
             else:
                 raise ValueError(f"{player_response}")
@@ -235,6 +239,9 @@ def main():
     """
     To run the game and present the opening credits to the user
     """
+
+    wins = 0
+    loses = 0
 
     opening_credits()
     select_word()
