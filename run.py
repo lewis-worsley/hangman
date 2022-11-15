@@ -9,10 +9,12 @@ class Color:
     RED = '\033[91m'
 
 def opening_credits():
+
+    
     global player_name
     
     player_name = input("Enter your name: ")
-    print(f"Hi {player_name}, let's play!\n")
+    print(f"\nHi {player_name}, let's play!\n")
 
 
 def play_game(word):
@@ -20,13 +22,10 @@ def play_game(word):
     To initate the start of the game for the user to begin playing
     """
 
-    print(word)
-
     guessed_letters = []
     lives = 6
     won = False
     chosen_word = "_" * len(word)
-    print(chosen_word)
 
     while lives > 0 and not won:
         print(graphics(lives))
@@ -48,29 +47,30 @@ def play_game(word):
                     if "_" not in chosen_word:
                         won = True
                         print(chosen_word)
-                        print(f"Congratulations {player_name}, you won!\n")
+                        print(f"\nCongratulations {player_name}, you won! The word was {word}.")
                         restart_game()
 
                 else:
                     guessed_letters.append(guess_letter)
                     lives = lives - 1
-                    print(f"{lives} lives left")
+                    print(f"\n{lives} lives left")
                     print(guessed_letters)
         
             elif guess_letter in guessed_letters:
-                print(f"You've already guessed '{guess_letter}'. Choose a different letter. Here are your current guesses {guessed_letters}.\n")
+                print(f"\nYou've already guessed '{guess_letter}'. Please choose a different letter. Here are your current guesses {guessed_letters}.\n")
 
         else:
             print(f"\nPlease select only one (1) letter. You selected '{guess_letter}' which contains {len(guess_letter)} letters.")
     
     if lives == 0:
         print(graphics(0))
-        print(f"Game Over. You lose {player_name}! The correct word was {word}")
+        print(chosen_word, "\n")
+        print(f"Game Over. You lose {player_name}! The correct word was {word}.")
         restart_game()
 
 def restart_game():
     """
-    Provides the player with an opportunity to restart the game
+    Provides the player with an opportunity to restart or end the game
     """
 
     player_restart = False
@@ -249,6 +249,6 @@ __    __
                 
     )
 
-print("Welcome to Hangman!")
+print("Welcome to Hangman!\n")
 
 main()
