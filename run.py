@@ -21,7 +21,8 @@ def opening_credits():
 
 def play_game(word):
     """
-    To initate the start of the game for the user to begin playing
+    To initate the start of the game for the user to begin playing.
+    Also keeps a record of the score
     """
 
     guessed_letters = []
@@ -42,7 +43,7 @@ def play_game(word):
                 if guess_letter in word:
                     guessed_letters.append(guess_letter)
                     broken_word = list(chosen_word)
-                    print(guessed_letters, "\n")
+                    print("\nHere are your current guesses:", guessed_letters, "\n")
                     indices = [i for i, letter in enumerate(word)
                                 if letter == guess_letter]
                     for index in indices:
@@ -56,16 +57,15 @@ def play_game(word):
                         wins = wins + 1
                         print(f"\n{player_name}'s score\nWins: {wins}\nLoses: {loses}")
                         restart_game()
-                        
 
                 else:
                     guessed_letters.append(guess_letter)
                     lives = lives - 1
                     print(f"\n{lives} lives left")
-                    print(guessed_letters)
+                    print("\nHere are your current guesses:", guessed_letters)
         
             elif guess_letter in guessed_letters:
-                print(f"\nYou've already guessed '{guess_letter}'. Please choose a different letter. Here are your current guesses {guessed_letters}.\n")
+                print(f"\nYou've already guessed '{guess_letter}'. Please choose a different letter. Here are your current guesses: {guessed_letters}.\n")
 
         else:
             print(f"\nPlease select only one (1) letter. You selected '{guess_letter}' which contains {len(guess_letter)} letters.")
