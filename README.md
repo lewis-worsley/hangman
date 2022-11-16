@@ -143,7 +143,7 @@ To help bring this project to life, the following deserve recognition:
 <hr>
 
 - https://www.reddit.com/r/learnpython/comments/2dtjzh/how_to_increment_a_global_variable_when_a/: helped solve the issue on player score
-- Random Word Generator: generating a list of random words for the Hangman to be able to function.
+- Random Word Generator: generating a list of random words for the Hangman to be able to function
 
 <br>
 
@@ -152,3 +152,4 @@ To help bring this project to life, the following deserve recognition:
 
 - Richard Wells (Code Institute mentor)
     - His feedback and guidance throughout helped me develop the game but also improve my understanding of Python.
+    - For also helping guiding me on how to design Hangman graphics in Python.
