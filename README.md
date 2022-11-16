@@ -87,6 +87,7 @@ I have manually tested the project by doing the following:
 
 - Player scores would not update after each round. This was fixed by moving their respective variables outside the function and adding a global scope to the variables in the play_game().
 - The goodbye screen would repeat it multiple times depending on how many times the player decided to play. To fix this, an exit() was added.
+- ASCII Art Generator: after testing the game, the font art style for opening title and goodbye screens appeared to cause alignment issues where the art wouldn't remain intact. So I decided to remove the art and replace them with text.
 
 <br>
 
@@ -99,6 +100,11 @@ I have manually tested the project by doing the following:
 
 ### Validator Testing
 <hr>
+
+- Code Institute's recommendation to use http://ww7.pep8online.com/ as a Python validation tool does not work. I get presented with these options, and after I click each option I get sent to different forms of marketing landing pages.
+- Despite my search on search engines, I've not been able to confidently use anoher Python validation tool to check my code for validation.
+
+<img src="readme-images/error-python-validation.jpg">
 
 <br>
 
@@ -136,8 +142,8 @@ To help bring this project to life, the following deserve recognition:
 ### Content
 <hr>
 
+- https://www.reddit.com/r/learnpython/comments/2dtjzh/how_to_increment_a_global_variable_when_a/: helped solve the issue on player score
 - Random Word Generator: generating a list of random words for the Hangman to be able to function.
-- ASCII Art Generator: Creating the font art style for opening screen title and goodbye screens.
 
 <br>
 
@@ -145,4 +151,4 @@ To help bring this project to life, the following deserve recognition:
 <hr>
 
 - Richard Wells (Code Institute mentor)
-    - His feedback and guidance throughout helped me developed the game but also improve my understand of Python.
+    - His feedback and guidance throughout helped me develop the game but also improve my understanding of Python.
