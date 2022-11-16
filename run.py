@@ -68,7 +68,7 @@ def play_game(word):
                     print("\nHere are your current guesses:", guessed_letters)
         
             elif guess_letter in guessed_letters:
-                print(f"\nYou've already guessed '{guess_letter}'. Please choose a different letter. Here are your current guesses: {guessed_letters}.\n")
+                print(f"\nYou've already guessed '{guess_letter}'. Please choose a different letter.\nHere are your current guesses: {guessed_letters}.\n")
 
         else:
             print(f"\nPlease select only one (1) letter. You selected '{guess_letter}' which contains {len(guess_letter)} letters.")

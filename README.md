@@ -2,9 +2,11 @@
 Hangman is an old school, popular game which is suitable for all ages. The point of the game is to test the player's vocabulary by guessing one letter at a time to solve the word puzzle.
 
 For the player to win the game they must guess each world correctly within a certain amount of lives.
+
+Live site: https://hangman-game-using-python.herokuapp.com/
 <br><br>
 
-<img src="assets/readme-images/am-i-responsive.jpg">
+<img src="readme-images/amiresponsive.jpg">
 
 <br>
 
@@ -64,6 +66,7 @@ I have manually tested the project by doing the following:
 
 ### Remaining Bugs
 <hr>
+
 - No bugs remaining
 
 <br>
