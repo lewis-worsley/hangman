@@ -1,31 +1,82 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Hangman
+Hangman is an old school, popular game which is suitable for all ages. The point of the game is to test the player's vocabulary by guessing one letter at a time to solve the word puzzle.
 
-Welcome Ryan Lewis,
+For the player to win the game they must guess each world correctly within a certain amount of lives.
+<br><br>
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+<img src="assets/readme-images/am-i-responsive.jpg">
 
-## Reminders
+<br>
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+## Contents
+<hr>
 
-## Creating the Heroku app
+[Features](https://github.com/lewis-worsley/fun-with-flags/blob/main/README.md#features)
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+[Testing](https://github.com/lewis-worsley/fun-with-flags/blob/main/README.md#testing)
 
-1. `heroku/python`
-2. `heroku/nodejs`
+[Deployment](https://github.com/lewis-worsley/fun-with-flags/blob/main/README.md#deployment)
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+[Languages](https://github.com/lewis-worsley/fun-with-flags/blob/main/README.md#languages)
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+[Software](https://github.com/lewis-worsley/fun-with-flags/blob/main/README.md#software)
 
-Connect your GitHub repository and deploy as normal.
+[Media](https://github.com/lewis-worsley/fun-with-flags/blob/main/README.md#media)
 
-## Constraints
+[Credits](https://github.com/lewis-worsley/fun-with-flags/blob/main/README.md#credits)
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+<br>
 
------
-Happy coding!
+## How to play
+<hr>
+
+
+
+
+
+## Features
+<hr>
+
+All of the contents and features is hosted on one page.
+
+
+
+## Testing
+<hr>
+Google Dev-tools was used for responsive design; to validate JavaScript concepts; run console.log; and use debugger and breakpoints to discover how the function was perfoming and where there were errors.
+
+
+## Deployment
+<hr>
+This project was deployed using Code Institues mock termina for Heroku
+
+- 
+
+<br>
+
+## Languages
+<hr>
+The coding languages used:
+
+- Python
+
+<br>
+
+## Credits
+<hr>
+To help bring this project to life, the following deserve recognition:
+
+<br>
+
+### Content
+<hr>
+
+- 
+
+<br>
+
+### Thanks
+<hr>
+
+- Richard Wells (Code Institute mentor)
+    - His feedback and guidance throughout helped me developed the game but also improve my understand of Python.
