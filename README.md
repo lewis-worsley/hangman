@@ -11,27 +11,26 @@ For the player to win the game they must guess each world correctly within a cer
 ## Contents
 <hr>
 
-[Features](https://github.com/lewis-worsley/fun-with-flags/blob/main/README.md#features)
+[Features](https://github.com/lewis-worsley/hangman/blob/main/README.md#features)
 
-[Testing](https://github.com/lewis-worsley/fun-with-flags/blob/main/README.md#testing)
+[Testing](https://github.com/lewis-worsley/hangman/blob/main/README.md#testing)
 
-[Deployment](https://github.com/lewis-worsley/fun-with-flags/blob/main/README.md#deployment)
+[Deployment](https://github.com/lewis-worsley/hangman/blob/main/README.md#deployment)
 
-[Languages](https://github.com/lewis-worsley/fun-with-flags/blob/main/README.md#languages)
+[Languages](https://github.com/lewis-worsley/hangman/blob/main/README.md#languages)
 
-[Software](https://github.com/lewis-worsley/fun-with-flags/blob/main/README.md#software)
-
-[Media](https://github.com/lewis-worsley/fun-with-flags/blob/main/README.md#media)
-
-[Credits](https://github.com/lewis-worsley/fun-with-flags/blob/main/README.md#credits)
+[Credits](https://github.com/lewis-worsley/hangman/blob/main/README.md#credits)
 
 <br>
 
 ## How to play
 <hr>
 
+The aim of the game is for the player to correctly guess the hidden word that is randomly chosen by the computer. If all the letters in the word have been guessed correctly - within the given amount of lives (which is 6) - then the player has the game.
 
+To play the user must type a single letter into the terminal. However, if the player was to submit an incorrect command, the terminal will prompt the player to pick another letter, whilst explaining why their last command didn't work.
 
+If all letter have been guessed correctly or their lives fall to zero the game is over.
 
 
 ## Features
@@ -71,7 +70,7 @@ To help bring this project to life, the following deserve recognition:
 ### Content
 <hr>
 
-- 
+- ASCII Art Generator: Creating the font art style for opening screen title and goodbye screens.
 
 <br>
 
