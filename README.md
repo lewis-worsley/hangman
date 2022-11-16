@@ -11,6 +11,8 @@ For the player to win the game they must guess each world correctly within a cer
 ## Contents
 <hr>
 
+[How to play](https://github.com/lewis-worsley/hangman/blob/main/README.md#howtoplay)
+
 [Features](https://github.com/lewis-worsley/hangman/blob/main/README.md#features)
 
 [Testing](https://github.com/lewis-worsley/hangman/blob/main/README.md#testing)
@@ -32,6 +34,9 @@ To play the user must type a single letter into the terminal. However, if the pl
 
 If all letter have been guessed correctly or their lives fall to zero the game is over.
 
+The hidden word will look like this (length will vary): _ _ _ _ _ _
+
+As the player guesses letter, it will begin to look similar to this example: _ R _ V E_
 
 ## Features
 <hr>
@@ -42,12 +47,30 @@ All of the contents and features is hosted on one page.
 
 ## Testing
 <hr>
-Google Dev-tools was used for responsive design; to validate JavaScript concepts; run console.log; and use debugger and breakpoints to discover how the function was perfoming and where there were errors.
 
+I have manually tested the project by doing the following:
+
+- Tested user inputs by checking if the game runs as expected. This includes inputting incorrect data.
+- Tested in the local terminal and on the mock terminal on the deployed site on Heroku.
+
+<br>
+
+### Bugs
+<hr>
+
+
+
+<br>
+
+### Remaining Bugs
+<hr>
+- No bugs remaining
+
+<br>
 
 ## Deployment
 <hr>
-This project was deployed using Code Institues mock termina for Heroku
+This project was deployed using Code Institute's mock terminal for Heroku.
 
 - 
 
