@@ -13,7 +13,7 @@ Live site: https://hangman-game-using-python.herokuapp.com/
 ## Contents
 <hr>
 
-[Howtoplay](https://github.com/lewis-worsley/hangman/blob/main/README.md#howtoplay)
+[How to play](https://github.com/lewis-worsley/hangman/blob/main/README.md#howtoplay)
 
 [Features](https://github.com/lewis-worsley/hangman/blob/main/README.md#features)
 
